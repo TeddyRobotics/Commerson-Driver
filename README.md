@@ -15,7 +15,7 @@ if __name__ == '__main__':
     motor_id = 12 #define motor ID
     angle = 150 #define angle to move to
     speed = 0.5 #speed
-    driver.move(motor_id, angle, speed) #move motor function
+    driver.move_motor(motor_id, angle, speed) #move motor function
 ```
 
 ## License
