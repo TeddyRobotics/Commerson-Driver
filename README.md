@@ -21,7 +21,8 @@ if __name__ == '__main__':
 ## Notes
 
 Must have jump a wire from MVin pin to 5V power from Raspberry Pi (as depicted in image below).
-![MVin Example](https://github.com/TeddyRobotics/Commerson-Driver/blob/master/mvin_example.jpg | width=100)
+
+<img src="mvin_example.jpg" width="40%">
 
 ## License
  
