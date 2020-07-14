@@ -18,6 +18,11 @@ if __name__ == '__main__':
     driver.move_motor(motor_id, angle, speed) #move motor function
 ```
 
+## Notes
+
+Must have jump a wire from MVin pin to 5V power from Raspberry Pi (as depicted in image below).
+![MVin Example](https://github.com/TeddyRobotics/Commerson-Driver/master/mvin_example.jpg)
+
 ## License
  
 The MIT License (MIT)
