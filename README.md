@@ -3,12 +3,12 @@ A python driver for our Commerson board that communicates with our servo motors
 
 ## Installation
  
-`pip install -r requirements.txt`
-We need to make some modifications to your pi in order for this to work:
-```sudo nano /boot/config.txt``` 
-and add the line `enable_uart=1` 
-Then 
-```sudo nano /boot/cmdline.txt``` 
+`pip install -r requirements.txt`  
+We need to make some modifications to your pi in order for this to work:  
+```sudo nano /boot/config.txt```  
+and add the line `enable_uart=1`  
+Then  
+```sudo nano /boot/cmdline.txt```  
 and DELETE the entry `console=ttyAMA0,115200` 
 
  
