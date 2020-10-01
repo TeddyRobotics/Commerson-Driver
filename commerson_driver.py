@@ -28,7 +28,7 @@ import serial
 
 class CommersonDriver:
     def __init__(self):
-        serial_port = '/dev/ttyAMA0'
+        serial_port = '/dev/ttyS0'
         port = serial.Serial(port=serial_port,
                              baudrate=115200,
                              parity=serial.PARITY_NONE,
@@ -39,3 +39,15 @@ class CommersonDriver:
         
     def move_motor(self, motor_id, angle, speed):
         self._servo.move(motor_id, angle, speed)
+
+    def set_motor_id(self, old_id, new_id):
+        self._servo.set_id(old_id, new_id)
+
+    def enable_motor(self, id):
+        self._servo.enable_motor(id)
+
+    def disable_motor(self, id):
+        self._servo.disable_motor(id)
+
+    def raw_move(self, id, position, time):
+        self._servo.raw_move(id, position, time)

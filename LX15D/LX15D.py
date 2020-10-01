@@ -156,6 +156,13 @@ class LX15D:
                      )
         #return time_const/1000 #Converted to seconds
 
+    def raw_move(self, servo_id, position, time):
+        self._command(
+                    servo_id, EEPROM['SERVO_MOVE_TIME_WRITE'],
+                    self.lower_byte(position), self.higher_byte(position),
+                    self.lower_byte(time), self.higher_byte(time),
+                     )
+
     def get_prepared_move(self, servo_id):
         self._command(servo_id, EEPROM['SERVO_MOVE_TIME_WAIT_READ'])
         response = self._wait_for_response(servo_id)

@@ -4,6 +4,13 @@ A python driver for our Commerson board that communicates with our servo motors
 ## Installation
  
 `pip install -r requirements.txt`
+We need to make some modifications to your pi in order for this to work:
+```sudo nano /boot/config.txt``` 
+and add the line `enable_uart=1` 
+Then 
+```sudo nano /boot/cmdline.txt``` 
+and DELETE the entry `console=ttyAMA0,115200` 
+
  
 ## Usage
  
@@ -23,6 +30,8 @@ if __name__ == '__main__':
 Must have jump a wire from MVin pin to 5V power from Raspberry Pi (as depicted in image below).
 
 <img src="mvin_example.jpg" width="40%">
+
+If you are getting a no serial port found error, then switch between /dev/ttyS0 and /dev/ttyAMA0 in commerson_driver.py.
 
 ## License
  
